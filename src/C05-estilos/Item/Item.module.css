@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+}
+
+.item {
+    border: 16px;
+    border-radius: 16px;
+    padding: 16px;
+}
