@@ -1,8 +1,8 @@
-//import styles from './Lista.module.css'
+import styles from './Lista.module.css'
 
 function Lista(props) {
     return (
-        <ul>{props.children}</ul>
+        <ul className={styles.elementos}>{props.children}</ul>
     )
 }
 

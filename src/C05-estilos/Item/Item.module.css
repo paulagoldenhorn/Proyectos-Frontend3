@@ -1,9 +1,19 @@
 * {
+    padding: 0;
     margin: 0;
+    border: 0;
+    list-style: none;
 }
 
 .item {
-    border: 16px;
+    border: solid;
     border-radius: 16px;
     padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+
+:global(.compact-theme) .item {
+    padding: 8px;
 }
