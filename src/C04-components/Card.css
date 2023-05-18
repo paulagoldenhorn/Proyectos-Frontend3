@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+}
+p {
+    border-style: dashed solid;
+    padding: 20px;
+}
+.hide {
+    display: none;
+}
+.container {
+    margin: 20px;
+}
