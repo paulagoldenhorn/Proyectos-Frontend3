@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Item from '../C05-estilos/Item/Item'
 import Lista from '../C05-estilos/Lista/Lista'
-import idGenerator from './idGenerator'
+import SuggestedAccount from './SuggestedAccount'
+import FollowingAccount from './FollowingAccount'
 
 const usuarios = [
   { id: '1', nombre: 'john', edad: 25, email: 'john@egbert.com' },
@@ -23,54 +23,49 @@ const usuarios = [
 ]
 
 function Clase08() {
-  const [following, setFollowing] = useState([])
+  const [followingAccs, setFollowingAccs] = useState([])
 
-  function handleFollowing(usuario) {
-      const followingElement = {
-        usuario_id: idGenerator(),
-        usuario,
-      }
-      const newFollowing = [...following, followingElement]
-      setFollowing(newFollowing)
+  function handleFollowing(account) {
+    if (!followingAccs.includes(account)) {
+      const copyAccount = account
+      const newFollowingAccs = [...followingAccs, copyAccount]
+      setFollowingAccs(newFollowingAccs)
+    }
   }
 
-  function handleUnfollow(usuario_id) {
-    const newFollowing = following.filter(
-      (user) => user.usuario_id !== usuario_id
+  function handleUnFollow(account) {
+    const newFollowingAccs = followingAccs.filter(
+      (followingAccount) => followingAccount.id !== account.id
     )
-    setFollowing(newFollowing)
+    setFollowingAccs(newFollowingAccs)
   }
 
   return (
     <>
       <h1>Cuentas que sigues:</h1>
       <Lista>
-        {following.map((user) => {
+        {followingAccs.map((followingAccount) => {
           return (
-            <Item key={user.usuario_id}>
-              <h3>{user.usuario.nombre}</h3>
-              <p>{user.usuario.edad}</p>
-              <p>{user.usuario.email}</p>
-              <button
-                style={{ color: 'green' }}
-                onClick={() => handleUnfollow(user.usuario_id)}
-              >
-                Siguiendo
-              </button>
-            </Item>
+            <FollowingAccount
+              key={followingAccount.id}
+              account={followingAccount}
+              onUnFollow={handleUnFollow}
+            />         
           )
         })}
       </Lista>
+      
+      <br />
+
       <h1>Cuentas sugeridas:</h1>
       <Lista>
-        {usuarios.map((usuario) => {
+        {usuarios.map((account) => {
           return (
-            <Item key={usuario.id}>
-              <h3>{usuario.nombre}</h3>
-              <p>{usuario.edad}</p>
-              <p>{usuario.email}</p>
-              <button onClick={() => handleFollowing(usuario)}>Seguir</button>
-            </Item>
+            <SuggestedAccount
+              key={account.id}
+              account={account}
+              onFollow={handleFollowing}
+            />         
           )
         })}
       </Lista>
