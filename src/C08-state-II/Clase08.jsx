@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Lista from '../C05-estilos/Lista/Lista'
-import SuggestedAccount from './SuggestedAccount'
-import FollowingAccount from './FollowingAccount'
+import SuggestedAccount from './Components/SuggestedAccount'
+import FollowingAccount from './Components/FollowingAccount'
 
 const usuarios = [
   { id: '1', nombre: 'john', edad: 25, email: 'john@egbert.com' },

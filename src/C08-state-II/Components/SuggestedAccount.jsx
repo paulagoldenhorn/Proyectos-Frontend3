@@ -1,4 +1,4 @@
-import Item from '../C05-estilos/Item/Item'
+import Item from "../../C05-estilos/Item/Item"
 
 function SuggestedAccount(props) {
   const { account } = props
