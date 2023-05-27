@@ -27,8 +27,7 @@ function Clase08() {
 
   function handleFollowing(account) {
     if (!followingAccs.includes(account)) {
-      const copyAccount = account
-      const newFollowingAccs = [...followingAccs, copyAccount]
+      const newFollowingAccs = [...followingAccs, account]
       setFollowingAccs(newFollowingAccs)
     }
   }
