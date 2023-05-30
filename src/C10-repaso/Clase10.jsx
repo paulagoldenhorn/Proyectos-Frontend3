@@ -2,18 +2,18 @@ import { useState } from 'react'
 import Formulario from './Formulario'
 import Pedido from './Pedido'
 import { generateId } from './idGenerator'
-//import Pedido from './Pedido'
 import ListaPedidos from './ListaPedidos'
 
 function Clase10() {
   const [orderedDish, setOrderedDish] = useState([])
 
-  function handleSubmit(dish) {
+  function handleSubmit(values) {
     setOrderedDish([
       ...orderedDish,
       {
         id: generateId(),
-        dish,
+        dishName: values.dishName,
+        dishQty: values.dishQty
       },
     ])
   }
@@ -25,16 +25,16 @@ function Clase10() {
 
   return (
     <>
-      <h1>Hacer un pedido:</h1>
+      <h2>Hacer un pedido:</h2>
       <br />
       <Formulario onSubmit={handleSubmit} />
       <br />
-      <h1>Tus pedidos:</h1>
+      <h2>Tus pedidos:</h2>
       <br />
       <ListaPedidos>
         {orderedDish &&
           orderedDish.map((dish) => {
-            return <Pedido key={dish.id} dish={dish} onDelete={handleDelete} />
+            return <Pedido key={dish.id} values={dish} onDelete={handleDelete} />
           })}
       </ListaPedidos>
     </>
