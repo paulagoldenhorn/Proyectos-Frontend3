@@ -7,12 +7,13 @@ import './index.css'
 //import Clase06 from './C06-keys/Clase06'
 //import Clase07 from './C07-state-I/Clase07'
 //import Clase08 from './C08-state-II/Clase08'
-import Clase09 from './C09-forms/Clase09'
+//import Clase09 from './C09-forms/Clase09'
+import Clase10 from './C10-repaso/Clase10'
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Clase09 />
+  <Clase10 />
 
   // <React.StrictMode>
   //   <App />
