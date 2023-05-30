@@ -25,6 +25,8 @@ function Clase10() {
 
   return (
     <>
+    <h1>Pedidos Ya!</h1>
+    <br />
       <h2>Hacer un pedido:</h2>
       <br />
       <Formulario onSubmit={handleSubmit} />

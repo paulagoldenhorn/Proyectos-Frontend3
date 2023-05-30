@@ -37,7 +37,7 @@ function Formulario(props) {
         value={dishName}
         onChange={(e) => setDishName(e.target.value)}
       />
-      <label htmlFor='dishQuantity'>Ingrese la cantidad por unidad</label>
+      <label htmlFor='dishQuantity'>Ingrese la cantidad de platos</label>
       <input
         type='number'
         name='dishQuantity'
