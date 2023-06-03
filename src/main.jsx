@@ -11,7 +11,6 @@ import './index.css'
 import Clase10 from './C10-repaso/Clase10'
 
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Clase10 />
 
