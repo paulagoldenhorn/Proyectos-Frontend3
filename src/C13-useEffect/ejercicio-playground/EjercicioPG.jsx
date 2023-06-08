@@ -1,41 +1,28 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import Pedido from './Pedido'
 
 function EjercicioPG() {
+  const [montarPedido, setMontarPedido] = useState(true)
 
-    const [montarPedido, setMontarPedido] = useState(false)
-    const [trigger, setTrigger] = useState(false)
+  function handleOnCancel() {
+    console.log('Su pedido ha sido cancelado con éxito')
+    setMontarPedido(false)
+  }
+  function handleOnOrder() {
+    console.log('Su pedido ha sido ordenado con éxito')
+    setMontarPedido(true)
+  }
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setMontarPedido(true)
-            console.log('EJERCICIO PG');
-            console.log('Componente actualizado');
-        }, 2000);
-        return () => {
-            clearTimeout(timer)
-            console.log('Componente desmontado');
-        }
-    }, [trigger])
-
-    function handleOnClick(){
-        alert('Su pedido ha sido cancelado con éxito')
-        setMontarPedido(false)
-        setTrigger(true)
-    }
-
-    return (
+  return (
     <>
-      <h4>Su pedido: </h4>
       {montarPedido ? (
-        <ul>
-            <li>2 Pizza</li>
-            <li>12 Empanadas</li>
-            <li>3 Gaseosas</li>
-        </ul>
-      ) : undefined}
-      
-    <button onClick={handleOnClick}>Cancelar pedido</button>
-    
+        <>
+          <Pedido handleMount={setMontarPedido} />
+          <button onClick={handleOnCancel}>Cancelar pedido</button>
+        </>
+      ) : (
+        <button onClick={handleOnOrder}>Ordenar pedido</button>
+      )}
     </>
   )
 }
