@@ -13,7 +13,7 @@ function Pedido(props) {
     }, 2000)
 
     return () => {
-      clearInterval(timer)
+      clearTimeout(timer)
       console.log('pedido cancelado')
     }
   }, [props.cancelar])
