@@ -10,11 +10,9 @@ function Ejercicio2() {
 
   return (
     <>
-      {!isActive ? (
-        <button onClick={toggleActive}>Activar</button>
-      ) : (
-        <button onClick={toggleActive}>Desactivar</button>
-      )}
+      <button onClick={toggleActive}>
+        {!isActive ? 'Activar' : 'Desactivar'}
+      </button>
 
       {isActive ? <Activo /> : undefined}
     </>
