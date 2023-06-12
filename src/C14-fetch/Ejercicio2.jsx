@@ -23,7 +23,7 @@ function Ejercicio2() {
     <>
       {data.length == 0 && <button onClick={fetchData}>Buscar datos</button>}
       {loading && <p style={{ color: 'yellow' }}>Cargando...</p>}
-      <ul>
+      <ol>
           {data.map((element) => {
             return (
               <React.Fragment key={element.id}>
@@ -31,7 +31,7 @@ function Ejercicio2() {
               </React.Fragment>
             )
           })}
-        </ul>
+        </ol>
     </>
   )
 }

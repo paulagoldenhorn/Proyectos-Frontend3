@@ -28,19 +28,22 @@ function Ejercicio4() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type='text'
-        placeholder='Titulo'
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <input
-        type='text'
-        placeholder='Cuerpo'
-        value={body}
-        onChange={(e) => setBody(e.target.value)}
-      />
-      <button type='submit'>Guardar</button>
+      <fieldset>
+        <legend>Ingresa tu post y miralo en la consola</legend>
+        <input
+          type='text'
+          placeholder='Titulo'
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <input
+          type='text'
+          placeholder='Cuerpo'
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+        />
+        <button type='submit'>Guardar</button>
+      </fieldset>
     </form>
   )
 }
