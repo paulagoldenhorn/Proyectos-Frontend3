@@ -10,11 +10,12 @@ import './index.css'
 //import Clase09 from './C09-forms/Clase09'
 //import Clase10 from './C10-repaso/Clase10'
 //import Clase13 from './C13-useEffect/Clase13'
-import Clase14 from './C14-fetch/Clase14'
+//import Clase14 from './C14-fetch/Clase14'
+import Clase15 from './C15-memo/Clase15'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Clase14 />
+  <Clase15 />
 
   // <React.StrictMode>
   //   <App />
