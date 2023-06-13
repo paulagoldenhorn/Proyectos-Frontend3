@@ -1,10 +1,9 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import products from './products.json'
 
 function Products() {
-  const [filteredProducts, setFilteredProducts] = useState([])
-  useMemo(() => {
-    setFilteredProducts(products.filter((product) => product.precio > 50))
+  const filteredProducts = useMemo(() => {
+    return products.filter((product) => product.precio > 50)
   }, [])
 
   return (

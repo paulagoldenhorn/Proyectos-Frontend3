@@ -3,10 +3,9 @@ import books from './books.json'
 
 function Books() {
   const [selectedOption, setSelectedOption] = useState('')
-  const [filteredBooks, setFilteredBooks] = useState([])
 
-  useMemo(() => {
-    setFilteredBooks(books.filter((book) => book.planeta === selectedOption))
+  const filteredBooks = useMemo(() => {
+   return books.filter((book) => book.planeta === selectedOption)
   }, [selectedOption])
 
   return (
