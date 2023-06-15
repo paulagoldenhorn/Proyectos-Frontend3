@@ -1,5 +1,5 @@
 .header {
-    background-color: olivedrab;
+    background-color: blueviolet;
     display: flex;
     padding: 20px;
     text-align: center;
@@ -12,4 +12,18 @@
     color: #333333;
     font-size: 24px;
     margin: 0;
+}
+
+.links {
+    color: orangered;
+}
+
+.secondaryHeader {
+    background-color: orange;
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
