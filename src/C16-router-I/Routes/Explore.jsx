@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom"
+import styles from '../Components/Header.module.css'
 
 function Explore() {
     
     return (
-        <>
-            <h1>Explore</h1>
-            <Link to='/' >Inicio</Link>
-            <Link to='/explore/tendencias'>Tendencias</Link>
-            <Link to='/explore/musica' >Musica</Link>
-            <Link to='/explore/peliculas'>Peliculas</Link>
-        </>
+        <div className={styles.header}>
+            <h1>Explorar</h1>
+            <Link to='tendencias'>Tendencias</Link>
+            <Link to='musica' >Musica</Link>
+            <Link to='peliculas'>Peliculas</Link>
+        </div>
     )
 }
 export default Explore
