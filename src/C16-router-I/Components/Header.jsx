@@ -10,7 +10,7 @@ function Header() {
             <Link to='/' className={styles.description}>Inicio</Link>
             <Link to='/shorts'className={styles.description}>Shorts</Link>
             <Link to='/suscripciones' className={styles.description}>Suscripciones</Link>
-            <Link to='/explorar' className={styles.description}>Explorar</Link>
+            <Link to='/explorar' className={styles.description}>Explorarr</Link>
         </div>
     )
 }
