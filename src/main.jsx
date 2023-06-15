@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 
 //import Clase02 from './C02-JSX/Clase02.jsx'
@@ -11,13 +12,16 @@ import './index.css'
 //import Clase10 from './C10-repaso/Clase10'
 //import Clase13 from './C13-useEffect/Clase13'
 //import Clase14 from './C14-fetch/Clase14'
-import Clase15 from './C15-memo/Clase15'
+//import Clase15 from './C15-memo/Clase15'
+import Clase16 from './C16-router-I/Clase16'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Clase15 />
+  <BrowserRouter>
+    <Clase16 />
+  </BrowserRouter>
+  
 
   // <React.StrictMode>
-  //   <App />
   // </React.StrictMode>,
 )
