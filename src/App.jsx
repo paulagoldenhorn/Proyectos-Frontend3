@@ -1,33 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
+import Home from './Home'
+import { paths } from './route_paths'
+import Clase02 from './C02-JSX/Clase02.jsx'
+import Clase04 from './C04-components/Clase04.jsx'
+import Clase05 from './C05-estilos/Clase05.jsx'
+import Clase06 from './C06-keys/Clase06'
+import Clase07 from './C07-state-I/Clase07'
+import Clase08 from './C08-state-II/Clase08'
+import Clase09 from './C09-forms/Clase09'
+import Clase10 from './C10-repaso/Clase10'
+import Clase13 from './C13-useEffect/Clase13'
+import Clase14 from './C14-fetch/Clase14'
+import Clase15 from './C15-memo/Clase15'
+// import Clase16 from './C16-router-I/Clase16'
+// import Clase16PG from './C16-router-playground/Clase16PG'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Routes>
+        <Route path='/' element={<Home />}>
+          <Route path={paths.notFound} element={<div>404 Not Found</div>} />
+          <Route path={paths.clase2} element={<Clase02 />} />
+          <Route path={paths.clase4} element={<Clase04 />} />
+          <Route path={paths.clase5} element={<Clase05 />} />
+          <Route path={paths.clase6} element={<Clase06 />} />
+          <Route path={paths.clase7} element={<Clase07 />} />
+          <Route path={paths.clase8} element={<Clase08 />} />
+          <Route path={paths.clase9} element={<Clase09 />} />
+          <Route path={paths.clase10} element={<Clase10 />} />
+          <Route path={paths.clase13} element={<Clase13 />} />
+          <Route path={paths.clase14} element={<Clase14 />} />
+          <Route path={paths.clase15} element={<Clase15 />} />
+        </Route>
+      </Routes>
     </>
   )
 }
