@@ -13,12 +13,13 @@ import './index.css'
 //import Clase13 from './C13-useEffect/Clase13'
 //import Clase14 from './C14-fetch/Clase14'
 //import Clase15 from './C15-memo/Clase15'
-import Clase16 from './C16-router-I/Clase16'
+//import Clase16 from './C16-router-I/Clase16'
+import Clase16PG from './C16-router-playground/Clase16PG'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <Clase16 />
+    <Clase16PG />
   </BrowserRouter>
   
 
