@@ -7,12 +7,12 @@ function Clase16() {
     <>
       <Header />
       <Routes>
-        <Route path='*' element={<div>404 Not Found</div>} />
+        <Route path='*' element={<div>404 Not Founddd</div>} />
         <Route
           path='/'
           element={
             <>
-              <h1>Inicio</h1>
+              <h1>Inicio DESDE CLASE16</h1>
               <Outlet />
             </>
           }

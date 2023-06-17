@@ -5,8 +5,8 @@ function Navbar() {
   return (
     <nav className={styles.nav}>
       <h3 className={styles.nav}>BIRRITAS !</h3>
-      <Link to='/home'>Home</Link>
-      <Link to='/contact'>Contact</Link>   
+      <Link to='home'>Home</Link>
+      <Link to='contact'>Contact</Link>   
     </nav>
   )
 }

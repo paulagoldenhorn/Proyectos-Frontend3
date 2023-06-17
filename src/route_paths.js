@@ -10,5 +10,7 @@ export const paths = {
     clase10: "clase10",
     clase13: "clase13",
     clase14: "clase14",
-    clase15: "clase15"
+    clase15: "clase15",
+    clase16: "clase16/*",
+    clase16PG: "clase16PG/*",
 }

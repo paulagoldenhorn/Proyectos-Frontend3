@@ -10,7 +10,7 @@ const Card = ({data}) => {
           <h3 className={styles.h3}>{data.name}</h3>
           <p className={styles.p}>{data.tagline}</p>
           <img src={data.image_url} alt="beer-detail" />
-          <button id={data.id} className={styles.button} onClick={() => navigate(`/beer/${data.id}`)}>Ver</button>
+          <button id={data.id} className={styles.button} onClick={() => navigate(`../beer/${data.id}`)}>Ver</button>
       </div>
     )
   }

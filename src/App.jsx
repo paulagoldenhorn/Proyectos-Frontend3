@@ -13,8 +13,8 @@ import Clase10 from './C10-repaso/Clase10'
 import Clase13 from './C13-useEffect/Clase13'
 import Clase14 from './C14-fetch/Clase14'
 import Clase15 from './C15-memo/Clase15'
-// import Clase16 from './C16-router-I/Clase16'
-// import Clase16PG from './C16-router-playground/Clase16PG'
+import Clase16 from './C16-router-I/Clase16'
+import Clase16PG from './C16-router-playground/Clase16PG'
 
 function App() {
   return (
@@ -33,6 +33,8 @@ function App() {
           <Route path={paths.clase13} element={<Clase13 />} />
           <Route path={paths.clase14} element={<Clase14 />} />
           <Route path={paths.clase15} element={<Clase15 />} />
+          <Route path={paths.clase16} element={<Clase16 />} />
+          <Route path={paths.clase16PG} element={<Clase16PG />} />
         </Route>
       </Routes>
     </>
