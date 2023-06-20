@@ -13,5 +13,6 @@ export const paths = {
     clase15: "clase15",
     clase16: "clase16/*",
     clase16PG: "clase16PG/*",
+    clase17: "clase17",
     clase18PG: "clase18PG",
 }
