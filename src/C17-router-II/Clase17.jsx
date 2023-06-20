@@ -9,6 +9,7 @@ function Clase17() {
         <Routes>
             <Route path='/' element={
                 <>
+                <h1>InstaPosts</h1>
                 <Outlet />
                 </>
             }>

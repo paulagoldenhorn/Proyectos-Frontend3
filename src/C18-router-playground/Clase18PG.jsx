@@ -1,5 +1,4 @@
 import { Routes, Route, Outlet } from 'react-router-dom'
-import Navbar from './components/Navbar'
 import Home from './routes/Home'
 import HotelDetail from './routes/HotelDetail'
 
@@ -12,7 +11,7 @@ function Clase18PG() {
           path='/'
           element={
             <>
-              <Navbar />
+            <h1>Hoteles</h1>
               <Outlet />
             </>
           }

@@ -19,7 +19,7 @@ function Hotel(props) {
       <p>{city}</p>
       <p>{stars} estrellas</p>
       <p>{daily_price}</p>
-      <button onClick={() => navigate(`details/${id}`)}>Ver mas</button>
+      <button onClick={() => navigate(`details/${id}`)}>Ver más</button>
     </div>
   )
 }
