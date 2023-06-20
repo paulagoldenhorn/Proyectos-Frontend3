@@ -1,0 +1,20 @@
+.card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: 1.5px solid white;
+    background-color: wheat;
+    width: 300px;
+    height: auto;
+    margin: 1rem;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: black;
+    
+  }
+
+  .card > img{
+    height: 200px;
+  }
