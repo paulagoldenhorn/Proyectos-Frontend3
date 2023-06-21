@@ -1,28 +1,25 @@
 import { useEffect, useState } from 'react'
 import styles from '../../C18-router-playground/Comps.module.css'
 import games from './games.json'
+import FilterForm from './FilterForm'
+import GameList from './GameList';
+
 
 function GamesIndex() {
+  const [gameList, setGameList] = useState([])
+  const [foundedElementsQty, setFoundedElementsQty] = useState('')
 
-    const [gameList, setGameList] = useState([])
+  useEffect(() => {
+    setGameList(games)
+  }, [])
 
-    useEffect(() => {
-        setGameList(games)
-    }, [])
-    
-    return (
-        <>
-            <div className={styles.cardContainer}>
-                {gameList && gameList.map(game => (
-                    <div key={game.id} className={styles.card}>
-                        <img style={{height: '150px'}} src={game.imgUrl}/>
-                        <h3>{game.name}</h3>
-                        <p>Jugado {game.playedTime} veces</p>
-                        <p>Puntaje: {game.score}</p>
-                    </div>
-                ))}
-            </div>
-        </>
-    )
+  return (
+    <>
+      <FilterForm onFoundedElementsQty={foundedElementsQty}/>
+      <div className={styles.cardContainer}>
+        <GameList data={gameList} onFoundedElements={(qty) => setFoundedElementsQty(qty)} />
+      </div>
+    </>
+  )
 }
 export default GamesIndex

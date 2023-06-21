@@ -8,27 +8,26 @@ function Hotel() {
   const navigate = useNavigate()
 
   const hotelDetail = useMemo(() => {
-    return hotels.filter((hotel) => hotel.id == params.id)
+    return hotels.filter((hotel) => hotel.id == params.id)[0]
   }, [params.id])
 
   return (
     <>
       <button onClick={() => navigate('..')} style={{backgroundColor: 'green'}}>Volver</button>
-      {hotelDetail &&
-        hotelDetail.map((hotel) => (
-          <div key={hotel.id} className={styles.card}>
-            <img src={hotel.img} />
-            <h3>{hotel.name}</h3>
-            <p>{hotel.daily_price}</p>
-            <p>{hotel.stars} estrellas</p>
-            <p>{hotel.city}</p>
-            <p>{hotel.description}</p>
-            <p>{hotel.wifi ? 'Tiene WIFI' : 'No tiene WIFI'}</p>
-            <p>{hotel.air_conditioned ? 'Tiene AC' : 'No tiene AC'}</p>
-            <p>{hotel.phone}</p>
-            <p>{hotel.email}</p>
+      {hotelDetail && 
+          <div key={hotelDetail.id} className={styles.card}>
+            <img src={hotelDetail.img} />
+            <h3>{hotelDetail.name}</h3>
+            <p>{hotelDetail.daily_price}</p>
+            <p>{hotelDetail.stars} estrellas</p>
+            <p>{hotelDetail.city}</p>
+            <p>{hotelDetail.description}</p>
+            <p>{hotelDetail.wifi ? 'Tiene WIFI' : 'No tiene WIFI'}</p>
+            <p>{hotelDetail.air_conditioned ? 'Tiene AC' : 'No tiene AC'}</p>
+            <p>{hotelDetail.phone}</p>
+            <p>{hotelDetail.email}</p>
           </div>
-        ))}
+        }
     </>
   )
 }

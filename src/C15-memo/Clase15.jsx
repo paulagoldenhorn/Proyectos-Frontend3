@@ -13,6 +13,7 @@ function Clase15() {
 
   return (
     <>
+      <h1>Clase 15</h1>
       <label>Ingresa dos números para ser sumados: </label>
       <input
         type='number'

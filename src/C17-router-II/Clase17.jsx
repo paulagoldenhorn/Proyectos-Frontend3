@@ -3,7 +3,7 @@ import IndexLogic from './IndexLogic'
 import Post from './Ejercicio1/Post'
 import PostsIndex from "./Ejercicio1/PostsIndex"
 import GamesIndex from "./Ejercicio2/GamesIndex"
-import Game from './Ejercicio2/Game'
+import GameDetail from './Ejercicio2/GameDetail'
 
 function Clase17() {
     
@@ -21,7 +21,7 @@ function Clase17() {
                 <Route path="/ejercicio1" element={<PostsIndex />}/>
                 <Route path='/ejercicio1/posts/:id' element={<Post />}/>
                 <Route path="/ejercicio2" element={<GamesIndex />}/>
-                <Route path='/ejercicio2/games/:id' element={<Game />}/>
+                <Route path='/ejercicio2/games/:id' element={<GameDetail />}/>
             </Route>
         </Routes>
         </>

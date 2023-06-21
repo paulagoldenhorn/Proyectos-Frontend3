@@ -21,7 +21,8 @@ function Home() {
             <Link to='/clase16PG/home'><button>Clase 16PG</button></Link>
             <Link to={paths.clase17}><button>Clase 17</button></Link>
             <Link to={paths.clase18PG}><button>Clase 18PG</button></Link>
-            <Outlet />
+            
+            <div className="outletContainer"> <Outlet /> </div>
         </nav>
     )
 }
