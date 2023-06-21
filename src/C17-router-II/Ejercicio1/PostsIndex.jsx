@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import styles from '../C18-router-playground/Comps.module.css'
+import styles from '../../C18-router-playground/Comps.module.css'
 
-function Index() {
+function PostsIndex() {
     const [data, setData] = useState([])
     const navigate = useNavigate()
 
@@ -25,4 +25,4 @@ function Index() {
         </ol>
     )
 }
-export default Index
+export default PostsIndex

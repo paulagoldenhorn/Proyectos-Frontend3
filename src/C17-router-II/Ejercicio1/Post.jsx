@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import styles from '../C18-router-playground/Comps.module.css'
+import styles from '../../C18-router-playground/Comps.module.css'
 
 function Post() {
   const params = useParams()
@@ -24,7 +24,7 @@ function Post() {
         <div className={styles.card}>
           <h3>{postDetail.title}</h3>
           <p>{postDetail.body}</p>
-          <button onClick={() => navigate('..')}>Volver</button>
+          <button onClick={() => navigate('../ejercicio1')}>Volver</button>
         </div>
       )}
     </>
