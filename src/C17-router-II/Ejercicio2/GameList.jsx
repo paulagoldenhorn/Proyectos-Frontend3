@@ -1,5 +1,6 @@
-import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams, Link } from 'react-router-dom'
 import { useEffect, useMemo } from 'react'
+
 import styles from '../../C18-router-playground/Comps.module.css'
 import GameRender from './GameRender'
 
@@ -21,8 +22,9 @@ function GameList(props) {
 
   return (
     <>
-      {searchParams.has('genre') && searchParams.has('minPlayedTime')
-        ? filteredGameList.map((game) => (
+      {searchParams.has('genre') && searchParams.has('minPlayedTime') ? (
+        filteredGameList.length != 0 ? (
+          filteredGameList.map((game) => (
             <div key={game.id} className={styles.card}>
               <GameRender game={game} />
               <button onClick={() => navigate(`games/${game.id}`)}>
@@ -30,14 +32,23 @@ function GameList(props) {
               </button>
             </div>
           ))
-        : props.data.map((game) => (
-            <div key={game.id} className={styles.card}>
-              <GameRender game={game} />
-              <button onClick={() => navigate(`games/${game.id}`)}>
-                Ver más
-              </button>
-            </div>
-          ))}
+        ) : (
+          <>
+            <h4>
+              No se encontraron elementos que coincidan con esos parametros
+            </h4>
+          </>
+        )
+      ) : (
+        props.data.map((game) => (
+          <div key={game.id} className={styles.card}>
+            <GameRender game={game} />
+            <button onClick={() => navigate(`games/${game.id}`)}>
+              Ver más
+            </button>
+          </div>
+        ))
+      )}
     </>
   )
 }
