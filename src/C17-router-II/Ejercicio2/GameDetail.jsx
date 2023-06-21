@@ -9,7 +9,7 @@ function GameDetail() {
   const navigate = useNavigate()
 
   const gameDetail = useMemo(() => {
-    return games.filter((game) => game.id == params.id)[0]
+    return games.find((game) => game.id == params.id)
   }, [])
 
   return (

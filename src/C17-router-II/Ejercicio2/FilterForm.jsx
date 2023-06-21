@@ -4,8 +4,7 @@ import { useSearchParams } from 'react-router-dom'
 function FilterForm(props) {
   const [minPlayedTime, setMinPlayedTime] = useState('')
   const [selectedGenre, setSelectedGenre] = useState('')
-
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [, setSearchParams] = useSearchParams()
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -24,7 +23,7 @@ function FilterForm(props) {
     >
       <h3>BUSCAR JUEGOS</h3>
       <h4>Genero: </h4>
-      <select name='genre' onChange={(e) => setSelectedGenre(e.target.value)}>
+      <select name='genre' value={selectedGenre} onChange={(e) => setSelectedGenre(e.target.value)}>
         <option>Select</option>
         <option value='Roguelike'>Roguelike</option>
         <option value='Platformer'>Platformer</option>
@@ -41,6 +40,7 @@ function FilterForm(props) {
       <input
         name='minPlayedTime'
         type='text'
+        value={minPlayedTime}
         onChange={(e) => setMinPlayedTime(e.target.value)}
       />
       <br />
