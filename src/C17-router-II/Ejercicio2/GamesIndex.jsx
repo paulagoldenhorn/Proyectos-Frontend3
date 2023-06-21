@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react'
 import styles from '../../C18-router-playground/Comps.module.css'
 import games from './games.json'
 import FilterForm from './FilterForm'
-import GameList from './GameList';
-
+import GameList from './GameList'
 
 function GamesIndex() {
   const [gameList, setGameList] = useState([])
@@ -15,9 +14,12 @@ function GamesIndex() {
 
   return (
     <>
-      <FilterForm onFoundedElementsQty={foundedElementsQty}/>
+      <FilterForm onFoundedElementsQty={foundedElementsQty} />
       <div className={styles.cardContainer}>
-        <GameList data={gameList} onFoundedElements={(qty) => setFoundedElementsQty(qty)} />
+        <GameList
+          data={gameList}
+          onFoundedElements={(qty) => setFoundedElementsQty(qty)}
+        />
       </div>
     </>
   )

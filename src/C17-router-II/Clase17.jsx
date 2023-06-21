@@ -20,6 +20,7 @@ function Clase17() {
             }>
                 <Route path="/ejercicio1" element={<PostsIndex />}/>
                 <Route path='/ejercicio1/posts/:id' element={<Post />}/>
+                
                 <Route path="/ejercicio2" element={<GamesIndex />}/>
                 <Route path='/ejercicio2/games/:id' element={<GameDetail />}/>
             </Route>

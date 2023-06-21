@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
-
 function FilterForm(props) {
   const [minPlayedTime, setMinPlayedTime] = useState('')
   const [selectedGenre, setSelectedGenre] = useState('')
@@ -14,7 +13,15 @@ function FilterForm(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{margin: '15px', backgroundColor: 'orange', color: 'black', width: '250px'}}>
+    <form
+      onSubmit={handleSubmit}
+      style={{
+        margin: '15px',
+        backgroundColor: 'orange',
+        color: 'black',
+        width: '250px',
+      }}
+    >
       <h3>BUSCAR JUEGOS</h3>
       <h4>Genero: </h4>
       <select name='genre' onChange={(e) => setSelectedGenre(e.target.value)}>
@@ -38,7 +45,13 @@ function FilterForm(props) {
       />
       <br />
       <button type='submit'>Buscar</button>
-      {props.onFoundedElementsQty ? <h3>Total de elementos encontrados: <span style={{color: 'blue'}}>{props.onFoundedElementsQty}</span></h3> : null}
+
+      {props.onFoundedElementsQty ? (
+        <h3>
+          Total de elementos encontrados:
+          <span style={{ color: 'blue' }}>{props.onFoundedElementsQty}</span>
+        </h3>
+      ) : null}
     </form>
   )
 }
