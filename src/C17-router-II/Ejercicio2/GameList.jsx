@@ -1,4 +1,4 @@
-import { useNavigate, useSearchParams, Link } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useEffect, useMemo } from 'react'
 
 import styles from '../../C18-router-playground/Comps.module.css'
@@ -6,7 +6,7 @@ import GameRender from './GameRender'
 
 function GameList(props) {
   const navigate = useNavigate()
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams, ] = useSearchParams()
 
   const filteredGameList = useMemo(() => {
     const genre = searchParams.get('genre')
