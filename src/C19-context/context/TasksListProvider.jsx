@@ -16,7 +16,7 @@ export const TasksListProvider = (props) => {
   }
 
   function deleteTask(id) {
-    setTaskList(tasksList.filter((elm) => elm.id != id))
+    setTaskList(tasksList.filter((elm) => elm.id !== id))
   }
 
   const value = {

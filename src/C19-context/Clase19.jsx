@@ -1,14 +1,9 @@
-import { useContext } from 'react'
-import {
-  TasksListContext,
-  TasksListProvider,
-} from './context/TasksListProvider'
+import { TasksListProvider } from './context/TasksListProvider'
 import TasksForm from './components/TasksForm'
 import TasksDashboard from './components/TasksDashboard'
 import styles from '../C18-router-playground/Comps.module.css'
 
 function Clase19() {
-  useContext(TasksListContext)
   return (
     <>
       <TasksListProvider>
