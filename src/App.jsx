@@ -15,8 +15,10 @@ import Clase14 from './C14-fetch/Clase14'
 import Clase15 from './C15-memo/Clase15'
 import Clase16 from './C16-router-I/Clase16'
 import Clase16PG from './C16-router-playground/Clase16PG'
-import Clase18PG from './C18-router-playground/Clase18PG'
 import Clase17 from './C17-router-II/Clase17'
+import Clase18PG from './C18-router-playground/Clase18PG'
+import Clase19 from './C19-context/Clase19';
+
 
 function App() {
   return (
@@ -39,6 +41,7 @@ function App() {
           <Route path={paths.clase16PG} element={<Clase16PG />} />
           <Route path='/clase17/*' element={<Clase17 />} />          
           <Route path='/clase18PG/*' element={<Clase18PG />} />
+          <Route path='/clase19/*' element={<Clase19 />} />
         </Route>
       </Routes>
     </>
