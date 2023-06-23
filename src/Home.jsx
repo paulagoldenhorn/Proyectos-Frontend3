@@ -20,6 +20,7 @@ function Home() {
             <Link to='/clase16'><button>Clase 16</button></Link>
             <Link to='/clase16PG/home'><button>Clase 16PG</button></Link>
             <Link to={paths.clase17}><button>Clase 17</button></Link>
+            <Link to={paths.clase18}><button>Clase 18</button></Link>
             <Link to={paths.clase18PG}><button>Clase 18PG</button></Link>
             <Link to={paths.clase19}><button>Clase 19</button></Link>
             
